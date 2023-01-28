@@ -12,17 +12,28 @@ public class ArrayAleatorio {
 		        
 	   int FINALINTERVALO = 10;
 		               
-	   int [] elementos = new int [CANTIDAD];
-		        
-	   for (int i = 0; i < CANTIDAD; i++) {
-		        	
-         elementos [i] = (int)(Math.random()*(FINALINTERVALO - INICIOINTERVALO +1)) + INICIOINTERVALO;
-		        	
-	   }	
-	   for (int i = 0; i < CANTIDAD; i++) {
-		   System.out.println(elementos[i]);
-	   }
+	   int [] elementos = new int [CANTIDAD]; 
+	   
+	   int[] repeticiones = new int[20];
 
-	}
+	    for (int i = 0; i < CANTIDAD; i++) {
+	    	elementos[i] = (int)(Math.random() * (FINALINTERVALO - INICIOINTERVALO + 1) + INICIOINTERVALO);
+	        if (elementos[i] > 0) {
+	          if (elementos[i] == elementos[i]) {
+	            repeticiones[elementos[i]]++;  
+	          }
+	        }
+	      }
+
+	      for(int i = 0; i < CANTIDAD; i++) {
+	        System.out.print(elementos[i] + " ");
+	      }
+	      
+	      System.out.println();
+	      
+	      for(int i = 0; i < CANTIDAD; i++) {
+	        System.out.println("El número " + elementos[i] + " se repite " + repeticiones[i] + " veces.");
+	      }
+	      	}
 
 }
