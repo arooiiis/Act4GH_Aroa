@@ -14,7 +14,9 @@ public class ArrayAleatorio {
 		               
 	   int [] elementos = new int [CANTIDAD]; 
 	   
-	   int[] repeticiones = new int[20];
+	   // Cambio la cantiddad del array
+	   
+	   int[] repeticiones = new int[30];
 
 	    for (int i = 0; i < CANTIDAD; i++) {
 	    	elementos[i] = (int)(Math.random() * (FINALINTERVALO - INICIOINTERVALO + 1) + INICIOINTERVALO);
