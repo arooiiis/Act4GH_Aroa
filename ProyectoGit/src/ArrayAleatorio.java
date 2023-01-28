@@ -18,7 +18,10 @@ public class ArrayAleatorio {
 		        	
          elementos [i] = (int)(Math.random()*(FINALINTERVALO - INICIOINTERVALO +1)) + INICIOINTERVALO;
 		        	
-	   }		  
+	   }	
+	   for (int i = 0; i < CANTIDAD; i++) {
+		   System.out.println(elementos[i]);
+	   }
 
 	}
 
